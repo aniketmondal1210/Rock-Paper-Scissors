@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Ultimate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors Ultimate</h1>
+        <div id="timer" class="timer">30</div>
+        <div class="game-mode">
+            <label for="mode-select">Game Mode:</label>
+            <select id="mode-select">
+                <option value="classic">Classic</option>
+                <option value="best-of-5">Best of 5</option>
+                <option value="time-attack">Time Attack (30s)</option>
+            </select>
+        </div>
+        <div class="score-board">
+            <div class="score player-score">
+                <p>Player</p>
+                <h2 id="player-score">0</h2>
+            </div>
+            <div id="vs">VS</div>
+            <div class="score computer-score">
+                <p>Computer</p>
+                <h2 id="computer-score">0</h2>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="choices">
+                <button class="choice" data-choice="rock">
+                    <span class="choice-icon">✊</span>
+                    <span class="choice-label">Rock</span>
+                </button>
+                <button class="choice" data-choice="paper">
+                    <span class="choice-icon">✋</span>
+                    <span class="choice-label">Paper</span>
+                </button>
+                <button class="choice" data-choice="scissors">
+                    <span class="choice-icon">✌️</span>
+                    <span class="choice-label">Scissors</span>
+                </button>
+            </div>
+        </div>
+        <div class="history">
+            <h3>Round History</h3>
+            <ul id="history-list"></ul>
+        </div>
+        <div class="result-container">
+            <div id="result" class="result">Choose your weapon!</div>
+            <button id="reset-btn" class="reset-btn">Reset Game</button>
+        </div>
+    </div>
+    <div id="confetti-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
